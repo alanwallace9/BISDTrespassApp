@@ -1,0 +1,90 @@
+import { User, TrespassedIndividual, UserRole } from './types';
+
+export const MOCK_USERS: User[] = [
+  { id: '1', username: 'master_admin', role: UserRole.MASTER_ADMIN },
+  { id: '2', username: 'district_admin', role: UserRole.DISTRICT_ADMIN },
+  { id: '3', username: 'campus_admin_hs', role: UserRole.CAMPUS_ADMIN, campus: 'Brazoswood High School' },
+  { id: '4', username: 'viewer', role: UserRole.VIEWER },
+];
+
+export const MOCK_USER_CREDENTIALS = {
+    [UserRole.MASTER_ADMIN]: { email: 'master@test.com', password: 'password123' },
+    [UserRole.DISTRICT_ADMIN]: { email: 'district@test.com', password: 'password123' },
+    [UserRole.CAMPUS_ADMIN]: { email: 'campus@test.com', password: 'password123' },
+    [UserRole.VIEWER]: { email: 'viewer@test.com', password: 'password123' },
+};
+
+export const MOCK_TRESPASS_DATA: TrespassedIndividual[] = [
+  {
+    id: '1',
+    firstName: 'John',
+    lastName: 'Doe',
+    dob: '1995-04-23',
+    status: 'Active',
+    association: 'Former Student',
+    guardianName: 'N/A',
+    guardianPhone: 'N/A',
+    warningExpiresDate: '2025-09-01',
+    trespassedFrom: 'Brazoswood High School',
+    contactInfo: '123-456-7890',
+    currentSchool: 'N/A',
+    imageUrl: 'https://picsum.photos/seed/johndoe/400/400',
+    notes: 'Subject was found near the locker rooms after school hours. Previously warned on 2023-08-15.',
+  },
+  {
+    id: '2',
+    firstName: 'Jane',
+    lastName: 'Smith',
+    dob: '1988-11-12',
+    status: 'Warning',
+    association: 'Parent',
+    guardianName: 'Robert Smith',
+    guardianPhone: '555-123-4567',
+    warningExpiresDate: '2024-12-31',
+    trespassedFrom: 'Clute Intermediate',
+    contactInfo: 'jane.smith@email.com',
+    currentSchool: 'N/A',
+    imageUrl: 'https://picsum.photos/seed/janesmith/400/400',
+    notes: 'Parent of a student, became aggressive during a meeting. Not allowed on campus without prior appointment.',
+  },
+  {
+    id: '3',
+    firstName: 'Michael',
+    lastName: 'Johnson',
+    dob: '2001-07-30',
+    status: 'Expired',
+    association: 'Stranger',
+    guardianName: 'N/A',
+    guardianPhone: 'N/A',
+    warningExpiresDate: '2023-05-20',
+    trespassedFrom: 'Lake Jackson Intermediate',
+    contactInfo: 'Unknown',
+    currentSchool: 'N/A',
+    imageUrl: 'https://picsum.photos/seed/michaeljohnson/400/400',
+    notes: 'Caught spray painting the gymnasium wall. Police report filed. Trespass order has since expired.',
+  },
+    {
+    id: '4',
+    firstName: 'Emily',
+    lastName: 'Davis',
+    dob: '1999-02-18',
+    status: 'Active',
+    association: 'Former Student',
+    guardianName: 'N/A',
+    guardianPhone: 'N/A',
+    warningExpiresDate: '2026-11-05',
+    trespassedFrom: 'Brazoswood High School',
+    contactInfo: 'emily.d@email.com',
+    currentSchool: 'N/A',
+    imageUrl: 'https://picsum.photos/seed/emilydavis/400/400',
+    notes: 'Repeatedly causing disruptions. Now officially trespassed indefinitely.',
+  },
+];
+
+export const CAMPUSES: string[] = [
+    'Brazoswood High School',
+    'Clute Intermediate',
+    'Lake Jackson Intermediate',
+    'Rasco Middle School',
+    'Freeport Elementary',
+];

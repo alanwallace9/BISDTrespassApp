@@ -1,0 +1,5 @@
+{
+  "name": "BISD Trespass Management",
+  "description": "A web application for managing school district trespass lists with role-based permissions for viewing and editing records. Data is managed via a simulated Google Sheets integration.",
+  "requestFramePermissions": []
+}
